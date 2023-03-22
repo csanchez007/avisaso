@@ -1,0 +1,7 @@
+{
+  "name": "omrbssmovil",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
