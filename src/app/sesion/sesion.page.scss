@@ -1,0 +1,26 @@
+.margintop{
+    margin-top: 5%;
+}
+.textolabel{
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+}
+ion-content {
+    --background: #2a3e52;
+}
+ion-card {
+    background: #ffffff;
+    /* margin-top: 25%; */
+}
+.topBody{
+    text-align: center;
+    position: relative;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+ion-content {
+    --background: #fff url('/assets/fondo.png') no-repeat center center / cover;
+  }

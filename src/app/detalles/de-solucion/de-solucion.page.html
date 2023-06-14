@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <!-- Dark Logo icon -->
+            <img src="assets/logo-icon.png" alt="homepage" class="dark-logo" />
+            <img src="assets/logo-text.png" alt="homepage" class="dark-logo" />
+            <!-- Light Logo text -->
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12">
+      
+            <div class="post">
+                <ion-item lines="nome">
+                    <ion-label>
+                         <h2><ion-icon name="person"></ion-icon> Nombre: {{nombre}}</h2>
+                    </ion-label>
+                </ion-item>
+                <ion-slides pager="true">
+                    <ion-slide
+                    *ngFor="let url of urls; index as i"
+                    class="image-slide" 
+                    [style]="url.rutaFoto | domSanitizer">
+                    </ion-slide>
+                </ion-slides>
+
+                <!--MAPA-->
+                <br/>
+                <div id="map"></div>
+
+                <ion-item line="none">
+                    <ion-icon slot="start" name="heart-empty"></ion-icon>
+                    <ion-icon slot="end" name="share" (click)="compartirReporte();"></ion-icon>
+                </ion-item>
+
+                <ion-item line="none">
+                    <ion-label>
+                        Descripción: {{descripcion}}
+                        <h5> Desde: {{desde | date: "dd/MM/yyyy"}} - Hasta: {{hasta | date: "dd/MM/yyyy"}} </h5>
+                    </ion-label>
+                </ion-item>
+
+               </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+</ion-content>

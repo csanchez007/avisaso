@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-button color="light" (click)="irAlHome()" class="colorBoton">
+          <ion-icon name="return-up-back-outline"></ion-icon>
+        </ion-button>
+        <ion-title>
+            <!-- Dark Logo icon -->
+            <img src="assets/logo-icon.png" alt="homepage" class="dark-logo" />
+            <img src="assets/logo-text.png" alt="homepage" class="dark-logo" />
+            <!-- Light Logo text -->
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-bordered table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">CLTE.</th>
+                            <th scope="col">DESDE</th>
+                            <th scope="col">IMG</th>
+                            <th scope="col">ACCIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let detalle of detalles">
+                            <td>{{detalle.Clientes}}</td>
+                            <td>{{detalle.desde | date: "dd/MM/yyyy"}}</td>
+                            <td> <img src="{{detalle.rutaFoto}}" width=53 height=73></td>
+                            <td>
+                                <ion-button size="small" color="light" (click)="EditarLista(detalle.id)">VER MÁS</ion-button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </ion-card>
+</ion-content>

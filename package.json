@@ -1,5 +1,5 @@
 {
-  "name": "omrbssmovil",
+  "name": "AVISASO",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -19,6 +19,17 @@
     "@angular/platform-browser": "^15.0.0",
     "@angular/platform-browser-dynamic": "^15.0.0",
     "@angular/router": "^15.0.0",
+    "@awesome-cordova-plugins/barcode-scanner": "^6.3.0",
+    "@awesome-cordova-plugins/camera": "^6.3.0",
+    "@awesome-cordova-plugins/device": "^6.3.0",
+    "@awesome-cordova-plugins/geolocation": "^6.3.0",
+    "@awesome-cordova-plugins/ionic-webview": "^6.3.0",
+    "@awesome-cordova-plugins/keyboard": "^6.3.0",
+    "@awesome-cordova-plugins/media-capture": "^6.3.0",
+    "@awesome-cordova-plugins/social-sharing": "^6.3.0",
+    "@awesome-cordova-plugins/splash-screen": "^6.3.0",
+    "@awesome-cordova-plugins/sqlite": "^6.3.0",
+    "@awesome-cordova-plugins/status-bar": "^6.3.0",
     "@ionic/angular": "^6.1.9",
     "@ionic/cordova-builders": "^8.0.0",
     "ionicons": "^6.0.3",
@@ -42,6 +53,20 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
+    "cordova-android": "^10.1.2",
+    "cordova-plugin-camera": "^6.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-file": "^7.0.0",
+    "cordova-plugin-geolocation": "^4.1.0",
+    "cordova-plugin-ionic-keyboard": "^2.2.0",
+    "cordova-plugin-ionic-webview": "^5.0.0",
+    "cordova-plugin-media-capture": "^4.0.0",
+    "cordova-plugin-nativestorage": "^2.3.2",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-x-socialsharing": "^6.0.4",
+    "cordova-sqlite-storage": "^6.1.0",
+    "es6-promise-plugin": "^4.2.2",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
@@ -54,8 +79,30 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "onesignal-cordova-plugin": "^3.3.1",
+    "phonegap-plugin-barcodescanner": "^8.1.0",
     "ts-node": "~8.3.0",
     "typescript": "~4.8.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-media-capture": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-sqlite-storage": {},
+      "onesignal-cordova-plugin": {},
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-nativestorage": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
 }

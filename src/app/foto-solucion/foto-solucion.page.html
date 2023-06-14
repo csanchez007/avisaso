@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            <!-- Dark Logo icon -->
+            <img src="assets/logo-icon.png" alt="homepage" class="dark-logo" />
+            <img src="assets/logo-text.png" alt="homepage" class="dark-logo" />
+            <!-- Light Logo text -->
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-subtitle>Recuerde ingresar los datos antes de tomar la foto</ion-card-subtitle>
+            <ion-card-title>Tomar Foto</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-card>
+                        <img [src]="image" *ngIf="image" />
+
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+        <br/>
+
+        <ion-item>
+
+            <ion-button color="dark" style="width:100%" expand="full" fill="outline" class="margintop" (click)="camara()">Toma una foto
+                <ion-icon name="camera"></ion-icon>
+            </ion-button>
+            <br/>
+            <br/>
+            <ion-button color="dark" style="width:100%"  expand="full" fill="outline" class="margintop" (click)="libreria()">Cargar Foto
+                <ion-icon name="camera"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+        <ion-item>
+
+            <ion-button *ngIf="guardarFotoSol === true" color="dark" style="width:100%" expand="full" fill="outline" [(ngModel)]="guardarFotoSol" class="margintop" (click)="uploadimagen()">Subir y Guardar Foto
+              <ion-icon name="camera"></ion-icon>
+            </ion-button>
+            <ion-button *ngIf="salirFotoSol === true" color="dark" style="width:100%" [(ngModel)]="salirFotoSol" expand="full" fill="outline" class="margintop" (click)="irAlHome()"> No subir fotos y salir
+                <ion-icon name="close-circle"></ion-icon>
+            </ion-button>
+
+        </ion-item>
+    </ion-card>
+
+
+</ion-content>

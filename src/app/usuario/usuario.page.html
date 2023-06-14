@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-button color="light" (click)="irAlHome()" class="colorBoton">
+          <ion-icon name="return-up-back-outline"></ion-icon>
+        </ion-button>
+        <ion-title>
+            <!-- Dark Logo icon -->
+            <img src="assets/logo-icon.png" alt="homepage" class="dark-logo" />
+            <img src="assets/logo-text.png" alt="homepage" class="dark-logo" />
+            <!-- Light Logo text -->
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+
+        <ion-item>
+            <h2> {{datosUser}}</h2>
+        </ion-item>
+
+        <ion-card-content>
+            <ion-list>
+                <ion-item>
+                    <ion-label>Nombre: <br/>{{datosUser}} {{apellido}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Usuario: <br/>{{user}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Correo:<br/>{{email}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Tipo usuario: <br/>{{tipo}}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Activo: {{activo}}</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+
+    </ion-card>
+</ion-content>

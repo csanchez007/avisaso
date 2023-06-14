@@ -1,0 +1,30 @@
+.colorCol{
+    background: #1f618d;
+}
+ion-content {
+    --background: #333;
+
+}
+ion-col{
+    color: #ffffff;
+}
+.linea{
+
+    border-bottom:solid 1px grey;
+    padding-bottom: 20%;
+    width:100%;
+    height:50px;
+  }
+  .cablinea{
+
+    border-bottom:solid 1px grey;
+    padding-bottom: 10%;
+    width:100%;
+    height:50px;
+    font-weight: bold;
+  }
+  .colorBoton{
+    background: #ffffff;
+    float: right;
+    margin-right: 2%;
+  }

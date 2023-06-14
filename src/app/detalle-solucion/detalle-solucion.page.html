@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-button color="light" (click)="irAlHome()" class="colorBoton">
+      <ion-icon name="return-up-back-outline"></ion-icon>
+    </ion-button>
+    <ion-title>
+                            <!-- Dark Logo icon -->
+      <img src="assets/logo-icon.png" alt="homepage" class="dark-logo" />
+      <img src="assets/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Detalle de solución</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="stacked">Posición Actual:</ion-label>
+      <ion-spinner name="lines-small"
+                   *ngIf="cargandoGeo"></ion-spinner>
+      <ion-toggle slot="end"
+                  [(ngModel)]="post.posicion"
+                  (ionChange)="getGeo()"></ion-toggle>
+  </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">USUARIO:</ion-label>
+      <ion-input value="Readonly" readonly value='{{RUT}}'[(ngModel)]="usuario"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Seleccione </ion-label>
+    <ion-select cancelText="Cancelar"  interface="action-sheet" [(ngModel)]="reporte" placeholder="Reporte" (click)="buscarReporte()">
+      <ion-select-option *ngFor="let report of reportes;" value="{{report.id}}">{{report.descripcion}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-item id="desde">
+      <ion-label>Desde</ion-label>
+      <ion-note slot="end">{{desde | date: 'dd-MM-YYYY'}}</ion-note>
+    </ion-item>
+    <ion-modal trigger="desde" [cssClass]="'bottom-end'">
+      <ng-template>
+        <ion-datetime
+          presentation="date"
+          [(ngModel)]="desde"
+          size="cover"
+          [showDefaultButtons]="true"
+        ></ion-datetime>
+      </ng-template>
+    </ion-modal>
+  </ion-list>
+
+  <ion-list>
+    <ion-item id="hasta">
+      <ion-label>Hasta</ion-label>
+      <ion-note slot="end">{{hasta | date: 'dd-MM-YYYY'}}</ion-note>
+    </ion-item>
+    <ion-modal trigger="hasta" [cssClass]="'bottom-end'">
+      <ng-template>
+        <ion-datetime
+          presentation="date"
+          [(ngModel)]="hasta"
+          size="cover"
+          [showDefaultButtons]="true"
+        ></ion-datetime>
+      </ng-template>
+    </ion-modal>
+  </ion-list>
+
+<ion-item>
+  <ion-label position="floating">Descripción</ion-label>
+  <ion-textarea [(ngModel)]="descripcion" name="descripcion"></ion-textarea>
+</ion-item>
+
+  </ion-card-content>
+</ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="SolucionAdd()">
+    <ion-fab-button color="primary">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

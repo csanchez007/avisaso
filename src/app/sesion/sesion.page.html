@@ -1,0 +1,21 @@
+<ion-content>
+    <ion-card class="topBody">
+        <ion-card-header>
+            Inicio de sesión
+        </ion-card-header>
+        <ion-card-content>
+
+            <ion-item>
+                <ion-label class="textolabel" position="floating">Usuario (RUT)</ion-label>
+                <ion-input type="text" [(ngModel)]="usser" name="usser" oninput="checkRut(this)"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label class="textolabel" position="floating">Password</ion-label>
+                <ion-input type="password" [(ngModel)]="pass" name="pass"></ion-input>
+            </ion-item>
+            <ion-button color="dark" expand="full" class="margintop" (click)="Session()">Ingresar</ion-button>
+            <ion-button color="dark" expand="full" class="margintop" (click)="Session()">Registrarme</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

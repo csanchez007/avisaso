@@ -1,0 +1,26 @@
+ion-content {
+    --background: #333;
+}
+ion-card {
+    background: #ffffff;
+    /* margin-top: 25%; */
+}
+.margintop{
+    margin-top: 5%;
+}
+.colorBoton{
+  background: #ffffff;
+  float: right;
+  margin-right: 2%;
+}
+ion-modal {
+  &.bottom-end {
+    align-items: flex-end;
+    --height: auto;
+    .ion-page {
+      position: relative;
+      display: block;
+      contain: content;
+    }
+  }
+}
